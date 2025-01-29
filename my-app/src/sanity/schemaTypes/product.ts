@@ -6,6 +6,16 @@ export const product = defineType({
   type: "document",
   fields: [
     {
+      name: "category",
+      title: "Category",
+      type: "reference",
+      to: [
+        {
+          type: "category",
+        },
+      ],
+    },
+    {
       name: "title",
       title: "Title",
       validation: (rule) => rule.required(),
